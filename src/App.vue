@@ -1,23 +1,34 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <div class="header"></div>
+    <asideNav  class="nav aside">
+      <div class="logo"><img src="./assets/logo2.png"></div>
+      <ul>
+        <navItem icon="book" path="/home" navname="首页"></navItem>
+        <navItem icon="layers" path="/test" navname="test"></navItem>
+      </ul>
+    </asideNav>
+    <div class="main">
+    <keep-alive>
+      <router-view></router-view>
+      </keep-alive>
+    </div>
   </div>
 </template>
 
 <script>
+import asideNav from './components/asideNav'
+import navItem from './components/navItem'
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    asideNav,
+    navItem
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import './assets/layout.scss'
+
 </style>
