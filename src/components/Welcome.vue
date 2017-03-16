@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <div class="welcome-pic"><img src="../assets/player.png"></div>
+    <div class="welcome-pic"><img src="../assets/images/player.png"></div>
     <h2>欢迎使用sass-lib</h2>
     <p>@author:lijing</p>
   </div>
@@ -30,5 +30,6 @@ export default {
     text-align:center;
     font-size:12px;
     color:#ccc;
+    padding-top:10px;
   }
 </style>
