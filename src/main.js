@@ -8,12 +8,14 @@ require('./app.scss')
 
 Vue.config.productionTip = false
 
+console.log(router);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
-  template: '<App/>',
-  components: {
-    App
-  }
+   render: h => h(App)
+  // template: '<App/>',
+  // components: {
+  //   App
+  // }
 })

@@ -19,7 +19,6 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #E95E5A;
 }
 
 .icon-eye:before {

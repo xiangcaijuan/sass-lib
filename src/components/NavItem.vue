@@ -1,6 +1,6 @@
 <template>
 	<li class="nav-item">
-		<router-link :to="{path:path}" replace router-link-active="active">
+		<router-link :to="{path:path}" replace router-link-active="active" replace>
 			<i v-bind:class="iconClass"></i>
 			<span>{{navname}}</span>
 		</router-link>

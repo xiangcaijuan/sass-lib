@@ -1,16 +1,46 @@
-.page-title {
-  height: 60px;
-  line-height: 60px;
-  font-size: 24px;
-  font-weight: normal;
-  border-bottom: 1px solid #cfdbe2;
-  padding-left: 20px;
-}
+ .center-absolutely-box {
+   position: relative;
+   .center-absolute-1 {
+     @include center-absolutely(70px, n);
+   }
+   .center-absolute-2 {
+     @include center-absolutely(n, 20px);
+   }
+   .center-absolute-3 {
+     @include center-absolutely(70px, 20px);
+   }
+ }
+ 
+ .center-block-1 {
+   width: 50px;
+   @extend %center-block;
+ }
+ 
+ .center-block-2 {
+   margin-top: 10px;
+   @include center-block(80%);
+ }
+ 
+ // center-transform
+ .center-transform-box {
+   position: relative;
+   .center-transform-1 {
+     @include center-transform;
+   }
+   .center-transform-2 {
+     @include center-transform(x);
+   }
+   .center-transform-3 {
+     @include center-transform(y);
+   }
+ }
 
-.center-absolutely-box {
-    position: relative;
-  .center-absolute {
-    @include center-absolutely(70px,n);
-    background:$box-bg;
-  }
+//  clear
+.clearfix-box{
+  @include clearfix;
+  // or @extend %clearfix;
+}
+.clearfix{
+  float: left;
+  margin: 1em;
 }
